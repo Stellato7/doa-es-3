@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituição Doadora De Animais</title>
+    <link rel="stylesheet" href="Denunce.css">
+    <script src="Denunce.js" defer></script>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <a href="../index/index.html"><img src="../img/logo.png" alt=""></a>
+        <nav>
+            <ul>
+                <li><a href="../nosotros/nosotros.html">Quem somos</a></li>
+                <li><a href="../Denuncie/Denunce.html">Denunciar</a></li>
+                <li><a href="../animais/animais.html">Animais</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="header">
+        <h1>Formulário de Denúncia de Maus-Tratos a Animais</h1>
+        <p>Por favor, preencha as informações abaixo para realizar a sua denúncia.</p>
+    </div>
+
+    <form id="denunciaForm" action="/enviar-denuncia" method="post" class="form">
+        <!-- Informações do Denunciante -->
+        <fieldset>
+            <legend>Informações do Denunciante</legend>
+
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX">
+        </fieldset>
+
+        <!-- Informações sobre a Denúncia -->
+        <fieldset>
+            <legend>Informações sobre a Denúncia</legend>
+
+            <label for="data">Data do ocorrido:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="endereco">Endereço do ocorrido:</label>
+            <input type="text" id="endereco" name="endereco" required placeholder="Rua, número, bairro, cidade">
+
+            <label for="descricao">Descrição do ocorrido:</label>
+            <textarea id="descricao" name="descricao" rows="5" required
+                placeholder="Descreva com detalhes o ocorrido"></textarea>
+        </fieldset>
+
+        <!-- Tipo de Animal -->
+        <fieldset>
+            <legend>Tipo de Animal</legend>
+
+            <label for="tipo_animal">Selecione o tipo de animal:</label>
+            <select id="tipo_animal" name="tipo_animal" required>
+                <option value="">Selecione</option>
+                <option value="cachorro">Cachorro</option>
+                <option value="gato">Gato</option>
+                <option value="ave">Ave</option>
+                <option value="outro">Outro</option>
+            </select>
+        </fieldset>
+
+        <!-- Botões de Ação -->
+        <button type="submit">Enviar Denúncia</button>
+        <button type="reset">Limpar Formulário</button>
+    </form>
+
+    <div class="denu">
+        <p>Denúncias anônimas serão aceitas. Todas as informações serão tratadas com sigilo.</p>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footer-section">
+            <h3>MAPA DO SITE</h3>
+            <ul>
+                <li><a href="../nosotros/nosotros.html">Quem somos</a></li>
+                <li><a href="../Denuncie/Denunce.html">Denunciar</a></li>
+                <li><a href="../animais/animais.html">Animais</a></li>
+            </ul>
+        </div>
+        <div class="footer-section partners">
+            <h3>PARCEIROS</h3>
+            <div class="partner-logos">
+                <img src="../img/eurofarma.png" alt="Parceiro 1">
+                <img src="../img/imgmel.png" alt="Parceiro 2">
+                <img src="../img/imgsenai.png" alt="Parceiro 3">
+            </div>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>CADASTRE-SE</h3>
+            <p>Cadastre seu e-mail e receba promoções e novidades!</p>
+            <form>
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit">ENVIAR</button>
+            </form>
+        </div>
+        <div class="footer-section contact-info">
+            <h3>ATENDIMENTO</h3>
+            <p>📞 Use o email de contato</p>
+            <p>📱 WhatsApp: (11)94594-2324</p>
+            <p>📧 <a href="mailto:contato@fbamicrochip.org.br">institutoeurofarma@gmail.com</a></p>
+            <p>📍 Av. Nações Unidas 22215<br>
+                São Paulo - SP CEP 04696-005</p>
+        </div>
+        <div class="footer-section copyright">
+            <p>© 2024 Proteção Animal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

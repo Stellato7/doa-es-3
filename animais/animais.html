@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animais.css">
+    <script src="poup.js" defer></script>
+    <title>Instituição Doadora De Animais</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header>
+        <a href="../index/index.html"><img src="../img/logo.png" alt=""></a>
+        <nav>
+          <ul>
+            <li><a href="../nosotros/nosotros.html">Quem somos</a></li>
+            <li><a href="../Denuncie/Denunce.html">Denunciar</a></li>
+            <li><a href="../animais/animais.html">Animais</a></li>
+           
+          </ul>
+        </nav>
+      </header>
+
+
+    <div class="header-image">
+        <img src="../img/loira333.PNG" alt="Federação Brasileira dos Animais">
+    </div>
+
+    <div class="adoption-section">
+        <h2 class="title">Animais para Adoção</h2>
+        <p class="description">
+            Para colocar seu animal para adoção, você deve preencher as informações do seu pet, bem como enviar uma foto
+            que tenha o visual do pet com aproximadamente 170x170. Assim que recebermos, será analisado e feito a
+            postagem
+            no site gratuitamente. Veja se a imagem está ok, se não, o anúncio não é publicado.
+        </p>
+        <p class="tips">
+            <strong>Dicas:</strong> O melhor local para divulgação são as feirinhas de adoção. Procure uma perto do seu
+            bairro
+            e divulgue por lá também. Outro são os locais de banho e tosa.
+        </p>
+        <p class="tips">
+            Outra dica muito boa é usar o WhatsApp Business, e dali mesmo fazer uma postagem. Tem um custo muito baixo,
+            vale
+            a pena, pois aparece muita gente interessada.
+        </p>
+        <button class="register-btn" id="openModal">Cadastrar Animal</button>
+    </div>
+
+    <!-- Estrutura do Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>CADASTRAR ANIMAL</h2>
+            <form>
+                <label>Foto</label>
+                <input type="file" accept="image/*"><br><br>
+
+                <label>Nome (Animal)</label>
+                <input type="text" placeholder="Digite o nome do animal">
+
+                <label>Raça</label>
+                <input type="text" placeholder="Digite a raça"><br><br>
+
+                <label>Nome</label>
+                <input type="text" placeholder="Digite seu nome"><br><br>
+
+                <label>E-mail</label>
+                <input type="email" placeholder="Digite seu e-mail">
+
+                <label>Telefone</label>
+                <input type="tel" placeholder="Digite seu telefone"><br><br>
+
+
+
+                <button type="submit" class="submit-button" id="submitBtn" >ENVIAR</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container animal-list">
+        <div class="titulo-lista">
+            <h2 class="title">Lista de Animais</h2>
+            <hr class="divider" />
+        </div>
+    </div>
+
+
+    <div class="container--card">
+
+        <!-- Modal -->
+        <div id="animalModal" class="animal-modal" style="display: none;">
+            <div class="animal-modal-content">
+                <div class="animal-modal-body">
+                    <img id="modalImage" src="" alt="Imagem do animal">
+                    <p id="modalName"><strong>Nome:</strong></p>
+                    <p id="modalBreed"><strong>Raça:</strong></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Continue adicionando mais cards -->
+    </div>
+    <footer>
+        <div class="footer-section">
+            <h3>MAPA DO SITE</h3>
+            <ul>
+                <li><a href="../nosotros/nosotros.html">Quem somos</a></li>
+                <li><a href="../Denuncie/Denunce.html">Denunciar</a></li>
+                <li><a href="../animais/animais.html">Animais</a></li>
+            </ul>
+        </div>
+        <div class="footer-section partners">
+            <h3>PARCEIROS</h3>
+            <div class="partner-logos">
+                <img src="../img/eurofarma.png" alt="Parceiro 1">
+                <img src="../img/imgmel.png" alt="Parceiro 2">
+                <img src="../img/imgsenai.png" alt="Parceiro 3">
+            </div>
+        </div>
+        <div class="footer-section newsletter">
+            <h3>CADASTRE-SE</h3>
+            <p>Cadastre seu e-mail e receba promoções e novidades!</p>
+            <form>
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit" class="buntton">ENVIAR</button>
+            </form>
+        </div>
+        <div class="footer-section contact-info">
+            <h3>ATENDIMENTO</h3>
+            <p>📞 Use o email de contato</p>
+            <p>📱 WhatsApp: (11)94594-2324</p>
+            <p>📧 <a href="mailto:contato@fbamicrochip.org.br">institutoeurofarma@gmail.com</a></p>
+            <p>📍 Av. Nações Unidas 22215<br>
+                São Paulo - SP CEP 04696-005</p>
+        </div>
+        <div class="footer-section copyright">
+            <p>© 2024 Proteção Animal. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="gallery"></div>
+    <script src="animais.js"></script>
+</body>
+
+</html>

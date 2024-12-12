@@ -1,0 +1,511 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #296026;
+  ;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Alinha a logo e a navegação verticalmente */
+  padding: 10px 20px;
+  background: #296026;
+  ;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav {
+  flex-grow: 1;
+  /* Faz com que o menu ocupe o espaço disponível */
+  text-align: center;
+  /* Centraliza os itens do menu horizontalmente */
+}
+
+header nav ul {
+  display: flex;
+  /* Faz os itens ficarem em linha */
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Seção principal */
+main {
+  justify-content: center;
+  align-items: center;
+  height: 580px;
+  background-image: url('img/gatos.jpeg');
+  /* Substituir pelo caminho da imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+} */
+
+.content {
+  /* position: relative; */
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #296026;
+  ;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.content .btn:hover {
+  background: #005f8a;
+}
+
+/* após a imagem */
+
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Layout dos investidores */
+.investor-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.investor {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 80px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: white;
+  padding: 5px;
+}
+
+.info-box {
+  background-color: #296026;
+  ;
+  color: #fff;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: left;
+  width: 250px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  left: 120px;
+  display: none;
+  /* Escondido inicialmente */
+}
+
+.info-box h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.info-box p {
+  font-size: 0.9rem;
+  margin: 10px 0 0 0;
+}
+
+.info-box.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* apresentacao */
+
+.quem-somos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* Garante que a largura ocupe 100% da tela */
+  padding: 20px;
+  background: #296026;
+  ;
+  color: #fff;
+}
+
+.apresentacao {
+  max-width: 50%;
+  /* Limita o tamanho do texto a 50% da tela */
+  margin-right: 20px;
+  /* Espaço entre texto e imagem */
+}
+
+.robot-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.robot {
+  width: 150px;
+  /* Tamanho do robô */
+  animation: float 3s infinite ease-in-out;
+  /* Animação de subir e descer */
+}
+
+/* Estilo geral para a seção */
+/* Seção principal */
+.federacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.conteudo {
+  display: flex;
+  gap: 20px;
+  /* Espaçamento entre texto e imagem */
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Texto */
+.texto {
+  flex: 1;
+}
+
+.texto h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  width: 50px;
+  height: 3px;
+  background-color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.texto .botao {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.texto .botao:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Imagem */
+.imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tratos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  color: #ff0000;
+}
+
+.tratos p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fafafa;
+  margin-bottom: 15px;
+}
+
+.tratos h2 {
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.botao_tratos {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.botao_tratos:hover {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.tratos_bg main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  background-image: url("../img/novo.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+
+}
+
+.texto_tratos {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.432);
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  /* Fundo mais escuro */
+  color: #FFFFFF;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px 10px;
+  background-color: #2E4A4A;
+  color: #FFFFFF;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #C5E3E3;
+  /* Verde água suave */
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.partner-logos {
+  display: flex;
+  gap: 10px;
+}
+
+.partner-logos img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.newsletter input[type="email"] {
+  width: calc(100% - 100px);
+  padding: 8px;
+  border: 1px solid #4E8E8E;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+.newsletter button {
+  padding: 8px 20px;
+  background-color: #4E8E8E;
+  /* Botão verde escuro */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #66B2B2;
+  /* Tom mais claro */
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #C5E3E3;
+  /* Verde água suave */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+.caixa{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Substituir pelo caminho da imagem de fundo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+ 
+}
+
+.slides {
+  transition: transform 0.5s ease-in-out;
+}
+
+button {
+ 
+  top: 50%;
+  
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide {
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+}

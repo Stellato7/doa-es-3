@@ -1,0 +1,617 @@
+/* Reset básico */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Alinha a logo e a navegação verticalmente */
+  padding: 10px 20px;
+  background: #296026;
+  ;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav {
+  flex-grow: 1;
+  /* Faz com que o menu ocupe o espaço disponível */
+  text-align: center;
+  /* Centraliza os itens do menu horizontalmente */
+}
+
+header nav ul {
+  display: flex;
+  /* Faz os itens ficarem em linha */
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  /* Texto mais legível */
+}
+
+.menu li a:hover {
+  color: #c8e6c9;
+  /* Cor de destaque ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    /* Coloca logo e menu em colunas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    /* Links do menu em pilha */
+    gap: 15px;
+  }
+}
+
+
+/* Cards */
+.container--card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: calc(100% / 4 - 20px);
+  max-width: 250px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #2e8b57;
+  color: white;
+  box-shadow: 0 8px 15px rgba(0, 128, 0, 0.4);
+  border-color: #2e8b57;
+}
+
+.image-container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  padding: 10px 0;
+  color: #333;
+}
+
+.info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.details-button {
+  padding: 10px 15px;
+  border: none;
+  background: green;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.details-button:hover {
+  background: white;
+  color: #2e8b57;
+  border: 1px solid #2e8b57;
+}
+
+/* Linha Separadora */
+.linha {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* Responsividade dos Cards */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(100% / 3 - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.header-image {
+  width: 100%;
+  /* Adapta a largura ao contêiner */
+  height: auto;
+  /* Mantém a proporção da imagem */
+  overflow: hidden;
+  /* Evita vazamentos de elementos */
+  display: block;
+  /* Centraliza o conteúdo, se necessário */
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  background-color: #f8f9fa;
+  /* Cor de fundo opcional */
+  border-radius: 8px;
+  /* Bordas arredondadas */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra para destacar */
+  object-fit: cover;
+}
+
+.header-image img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.adoption-section {
+  background-color: #f8f8f8;
+  /* Fundo branco com tom leve */
+  border: 1px solid #ddd;
+  /* Borda cinza clara */
+  padding: 20px;
+  border-radius: 8px;
+  /* Cantos arredondados */
+  max-width: 800px;
+  margin: 20px auto;
+  /* Centraliza a seção */
+  text-align: left;
+  /* Alinha o texto à esquerda */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4caf50;
+  /* Verde para o título */
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4caf50;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.adoption-section {
+  background-color: #ffffff;
+  /* Fundo branco */
+  border: 1px solid #e0e0e0;
+  /* Borda cinza clara */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sombra leve */
+  border-radius: 10px;
+  /* Cantos arredondados */
+  padding: 30px;
+  max-width: 700px;
+  margin: 30px auto;
+  /* Centraliza a seção */
+  font-family: 'Arial', sans-serif;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2d7a35;
+  /* Verde escuro */
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #2d7a35;
+  /* Linha decorativa */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.description,
+.tips {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  /* Cinza escuro */
+  margin-bottom: 15px;
+}
+
+.tips strong {
+  color: #2d7a35;
+  /* Destaque verde */
+}
+
+.register-btn {
+  display: block;
+  background: linear-gradient(45deg, #2d7a35, #4caf50);
+  /* Gradiente */
+  color: #fff;
+  /* Texto branco */
+  text-align: center;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Sombra no botão */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #388e3c;
+  /* Cor no hover */
+  transform: scale(1.05);
+  /* Efeito de zoom */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.animal-list titulo-lista {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+/* Centralizar título */
+.titulo-lista {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.titulo-lista .title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.divider {
+
+  background-color: #4CAF50;
+  /* cor verde */
+  margin: 10px auto 0;
+  border: none;
+}
+
+/* Estilo geral do modal */
+.modal {
+  display: none;
+  /* Ocultar o modal por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fundo semi-transparente */
+  z-index: 1;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  /* Centraliza verticalmente e horizontalmente */
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  /* Tamanho do modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar */
+.close {
+  color: #000;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Título e formatação geral */
+h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+button {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+/* Modal */
+.animal-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.animal-modal-body img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.animal-modal-close {
+  margin-left: 17em;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Botão de detalhes */
+.animal-details-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.animal-details-button:hover {
+  background-color: #45a049;
+}
+
+/* Card */
+.animal-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.animal-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.animal-card-info {
+  margin-bottom: 10px;
+}
+
+.animal-card-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.animal-card-separator {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px 10px;
+  background-color: #2E4A4A;
+  color: #FFFFFF;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #C5E3E3;
+  /* Verde água suave */
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.partner-logos {
+  display: flex;
+  gap: 10px;
+}
+
+.partner-logos img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.newsletter input[type="email"] {
+  width: calc(100% - 100px);
+  padding: 8px;
+  border: 1px solid #4E8E8E;
+  border-radius: 5px;
+  margin-right: 5px;
+  background-color: #FFFFFF;
+  color: #000;
+}
+
+.button {
+  padding: 8px 20px;
+  background-color: #4E8E8E;
+  /* Botão verde escuro */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #66B2B2;
+  /* Tom mais claro */
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: #C5E3E3;
+  /* Verde água suave */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-section.copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
